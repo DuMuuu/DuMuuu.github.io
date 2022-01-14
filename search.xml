@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Test</title>
+      <link href="/2022/01/13/Test/"/>
+      <url>/2022/01/13/Test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CeShi</title>
+      <link href="/2022/01/10/ceshi/"/>
+      <url>/2022/01/10/ceshi/</url>
+      
+        <content type="html"><![CDATA[<p>Hexo博客NexT主题下如何添加分类、标签<br>Hexo NexT主题默认带有不少菜单，如关于（about）、分类（categories）、标签（tags）等，<br> <img src="/2022/01/10/ceshi/2.jpg" alt="test"></p><span id="more"></span><p>默认处于注释状态，将需要取消的菜单注释掉，然后生成相应的 page 即可。</p><pre class=" language-bash"><code class="language-bash">1、打开 ~\themes\next\_config.yml 文件，找到 menu 相关的设置，取消掉需要的菜单项的注释。</code></pre><pre class=" language-bash"><code class="language-bash">重新生成部署后，可以看到新增的菜单项，但是单击后会报如下错误</code></pre><pre class=" language-bash"><code class="language-bash">这是因为还需要运行如下命令新建相关 page:::smile:</code></pre><pre class=" language-bash"><code class="language-bash">新建 page 后，会在 <span class="token function">source</span> 目录下新建 about、tags、categories文件夹，每个文件夹下还会创建一个index.md文件表示关于、标签页分类页面，编辑这三个MarkDown文件可以自定义这三个页面的内容.</code></pre><pre class=" language-bash"><code class="language-bash">最后一步，编辑各页面对应的index.md文件，增加 <span class="token function">type</span> 即可。注意冒号 <span class="token keyword">:</span> 后必须空一格，title 和 <span class="token function">date</span> 是默认生成的。重新部署后能够看到效果。</code></pre><pre class=" language-bash"><code class="language-bash">在新建博文的头部，直接输入该博文的分类、标签等即可。分类只能有一个，标签能有多个，多个标签不能一行，注意下面的格式。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> AA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Md </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2022/01/07/hello-world/"/>
+      <url>/2022/01/07/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer <span id="more"></span>in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h2 id="HuanYingGuangLingS"><a href="#HuanYingGuangLingS" class="headerlink" title="HuanYingGuangLingS"></a>HuanYingGuangLingS</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AAA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Md </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
