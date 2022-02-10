@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CeShi, HTML,CSS,JavaScript,Vue.js等">
+    <meta name="keywords" content="JS对象, HTML,CSS,JavaScript,Vue.js等">
     <meta name="description" content="人们赞美流星，是因为它燃烧着走完自己的全部路程">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CeShi | MuBlog</title>
+    <title>JS对象 | MuBlog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -227,12 +227,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CeShi</h1>
+                    <h1 class="description center-align post-title">JS对象</h1>
                 </div>
             </div>
         </div>
@@ -348,8 +348,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Md/">
-                                <span class="chip bg-color">Md</span>
+                            <a href="/tags/%E5%AF%B9%E8%B1%A1%E3%80%81%E7%B1%BB%E3%80%81%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">
+                                <span class="chip bg-color">对象、类、内置对象</span>
                             </a>
                         
                     </div>
@@ -360,8 +360,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/AA/" class="post-category">
-                                AA
+                            <a href="/categories/technology/" class="post-category">
+                                technology
                             </a>
                         
                     </div>
@@ -394,22 +394,36 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Hexo博客NexT主题下如何添加分类、标签<br>Hexo NexT主题默认带有不少菜单，如关于（about）、分类（categories）、标签（tags）等，<br> <img src="/2022/01/10/ceshi/2.jpg" alt="test"></p>
-<span id="more"></span>
-<p>默认处于注释状态，将需要取消的菜单注释掉，然后生成相应的 page 即可。</p>
-<pre class=" language-bash"><code class="language-bash">1、打开 ~\themes\next\_config.yml 文件，找到 menu 相关的设置，取消掉需要的菜单项的注释。
+                <h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><h3 id="类是对象的抽象，对象是类的实例"><a href="#类是对象的抽象，对象是类的实例" class="headerlink" title="类是对象的抽象，对象是类的实例"></a>类是对象的抽象，对象是类的实例</h3><p>在js中一切皆为对象，如字符串、数字、数组等<br>在js中对象的本质：属性和方法的集合</p>
+<h3 id="JS内置对象（10个）"><a href="#JS内置对象（10个）" class="headerlink" title="JS内置对象（10个）"></a>JS内置对象（10个）</h3><p>1、 Object对象：是所有JavaScript对象的超类（基类）<br>2、Array对象 数组对象—定义数组属性和方法<br>3、Boolean对象 布尔对象—布尔值相关<br>4、Date对象 日期对象—日期时间相关<br>5、Error对象 错误对象—处理程序错误<br>6、Function对象 函数对象—定义函数属性和方法<br>7、Math对象 数学对象—各种数学运算工具(不是构造函数)<br>8、Number对象 数字对象—定义数字属性和方法<br>9、RegExp对象 正则表达式对象—定义文本匹配与筛选规则<br>10、String对象 字符串对象—定义字符串属性和方法</p>
+<h4 id="1、创建对象"><a href="#1、创建对象" class="headerlink" title="1、创建对象"></a>1、创建对象</h4><p>方法1 字面量创建</p>
+<pre class=" language-bash"><code class="language-bash">    //字面量创建
+    var person <span class="token operator">=</span> <span class="token punctuation">{</span>
+        //键值对
+        //key <span class="token keyword">:</span> value
+        height <span class="token keyword">:</span> 170,
+        weight <span class="token keyword">:</span> 70,
+        say <span class="token keyword">:</span> function<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            alert<span class="token punctuation">(</span>111<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
 </code></pre>
-<pre class=" language-bash"><code class="language-bash">重新生成部署后，可以看到新增的菜单项，但是单击后会报如下错误
+<p>方法2 new创建</p>
+<pre class=" language-bash"><code class="language-bash">    //new创建 
+    var person <span class="token operator">=</span> new Object<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    person.height <span class="token operator">=</span> 170<span class="token punctuation">;</span> 
+    person.weight <span class="token operator">=</span> 70<span class="token punctuation">;</span> 
+    person.say <span class="token operator">=</span> function<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> 
+        alert<span class="token punctuation">(</span>456<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
 </code></pre>
-<pre class=" language-bash"><code class="language-bash">这是因为还需要运行如下命令新建相关 page
-::
-:smile:
-</code></pre>
-<pre class=" language-bash"><code class="language-bash">新建 page 后，会在 <span class="token function">source</span> 目录下新建 about、tags、categories文件夹，每个文件夹下还会创建一个index.md文件表示关于、标签页分类页面，编辑这三个MarkDown文件可以自定义这三个页面的内容.
-</code></pre>
-<pre class=" language-bash"><code class="language-bash">最后一步，编辑各页面对应的index.md文件，增加 <span class="token function">type</span> 即可。注意冒号 <span class="token keyword">:</span> 后必须空一格，title 和 <span class="token function">date</span> 是默认生成的。重新部署后能够看到效果。
-</code></pre>
-<pre class=" language-bash"><code class="language-bash">在新建博文的头部，直接输入该博文的分类、标签等即可。分类只能有一个，标签能有多个，多个标签不能一行，注意下面的格式。
+<h4 id="2、使用对象"><a href="#2、使用对象" class="headerlink" title="2、使用对象"></a>2、使用对象</h4><pre class=" language-bash"><code class="language-bash">    //对象名.属性名 
+    //alert<span class="token punctuation">(</span>height<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    alert<span class="token punctuation">(</span>person.height<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+    //对象名.方法名<span class="token punctuation">(</span><span class="token punctuation">)</span> 
+    person.say<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    console.log<span class="token punctuation">(</span>person<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 
                 
@@ -475,8 +489,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Md/">
-                                    <span class="chip bg-color">Md</span>
+                                <a href="/tags/%E5%AF%B9%E8%B1%A1%E3%80%81%E7%B1%BB%E3%80%81%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">
+                                    <span class="chip bg-color">对象、类、内置对象</span>
                                 </a>
                             
                         </div>
@@ -985,8 +999,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/AAA/" class="post-category">
-                                    AAA
+                            <a href="/categories/article/" class="post-category">
+                                    article
                                 </a>
                             
                             
@@ -996,8 +1010,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Md/">
-                        <span class="chip bg-color">Md</span>
+                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                        <span class="chip bg-color">随笔</span>
                     </a>
                     
                 </div>
