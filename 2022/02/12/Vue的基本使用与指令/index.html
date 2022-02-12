@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JS-闭包和继承, HTML,CSS,JavaScript,Vue.js等">
+    <meta name="keywords" content="Vue的基本使用与指令, HTML,CSS,JavaScript,Vue.js等">
     <meta name="description" content="人们赞美流星，是因为它燃烧着走完自己的全部路程">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JS-闭包和继承 | MuBlog</title>
+    <title>Vue的基本使用与指令 | MuBlog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -227,12 +227,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JS-闭包和继承</h1>
+                    <h1 class="description center-align post-title">Vue的基本使用与指令</h1>
                 </div>
             </div>
         </div>
@@ -348,8 +348,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JS%E3%80%81%E9%97%AD%E5%8C%85%E3%80%81%E7%BB%A7%E6%89%BF/">
-                                <span class="chip bg-color">JS、闭包、继承</span>
+                            <a href="/tags/Vue/">
+                                <span class="chip bg-color">Vue</span>
                             </a>
                         
                     </div>
@@ -373,7 +373,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-01-13
+                    2022-02-12
                 </div>
                 
 
@@ -394,101 +394,146 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>函数在创建的时候会创建两个对象，一个是函数对象本身，另一个是作用域链对象<br>函数在调用的时候会创建一个执行环境对象（活动对象）</p>
-<h2 id="闭包（closure）"><a href="#闭包（closure）" class="headerlink" title="闭包（closure）"></a>闭包（closure）</h2><p>闭包可以在全局函数里面操作另一个作用域的局部变量，既能重复使用，又不会污染全局<br>闭包有三步：<br>1、外层函数嵌套内层函数<br>2、内层函数使用外层函数的局部变量<br>3、把内层函数作为外层函数的返回值<br>图例解析：<br>1、预解析<br><img src="/2022/01/13/Test/%E9%A2%84%E8%A7%A3%E6%9E%90.png" alt="预解析"><br>2、调用时<br><img src="/2022/01/13/Test/%E8%B0%83%E7%94%A8%E6%97%B6.png" alt="调用时"><br>3、调用后<br><img src="/2022/01/13/Test/%E8%B0%83%E7%94%A8%E5%90%8E.png" alt="调用后"><br>4、fn调用时<br><img src="/2022/01/13/Test/fn%E8%B0%83%E7%94%A8%E6%97%B6.png" alt="fn调用时"><br>5、fn调用后<br><img src="/2022/01/13/Test/fn%E8%B0%83%E7%94%A8%E5%90%8E.png" alt="fn调用后"></p>
-<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>子类共享父类的属性和方法，js的继承都是基于原型实现的</p>
-<h3 id="1、原型链继承：子类的原型指向父类的实例"><a href="#1、原型链继承：子类的原型指向父类的实例" class="headerlink" title="1、原型链继承：子类的原型指向父类的实例"></a>1、原型链继承：子类的原型指向父类的实例</h3><pre class=" language-bash"><code class="language-bash">    <span class="token keyword">function</span> Cat<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-     <span class="token punctuation">}</span>
-    Cat.prototype <span class="token operator">=</span> new Animal<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    Cat.prototype.name <span class="token operator">=</span> <span class="token string">'cat'</span><span class="token punctuation">;</span>
-    var <span class="token function">cat</span> <span class="token operator">=</span> new Cat<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    console.log<span class="token punctuation">(</span>cat.name<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    cat.say<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    cat.eat<span class="token punctuation">(</span><span class="token string">'fish'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    console.log<span class="token punctuation">(</span>cat instanceof Animal<span class="token punctuation">)</span><span class="token punctuation">;</span> //true 
-    console.log<span class="token punctuation">(</span>cat instanceof Cat<span class="token punctuation">)</span><span class="token punctuation">;</span> //true
+                <h2 id="Vue的基本使用"><a href="#Vue的基本使用" class="headerlink" title="Vue的基本使用"></a>Vue的基本使用</h2><p>1、导入vue.js的script脚本文件<br>2、在页面中声明一个将要被vue所控制的DOM区域<br>3、创建vm实例对象 （vue实例对象）</p>
+<pre class=" language-bash"><code class="language-bash">    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>url<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"../vue-2.6.12.js"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
+    <span class="token operator">&lt;</span>script<span class="token operator">></span>
+        const vm <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+            el: <span class="token string">'#app'</span>,//el指定选择器
+ 
+        data: <span class="token punctuation">{</span>
+            url: <span class="token string">'www.xxhzm.cn'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">></span>
 </code></pre>
-<p>特点：<br>非常纯粹的继承关系，实例是子类的实例，也是父类的实例<br>父类新增原型方法/原型属性，子类都能访问到<br>简单，易于实现<br>缺点：<br>要想为子类新增属性和方法，必须要在new Animal()这样的语句之后执行，不能放到构造器中<br>无法实现多继承<br>来自原型对象的引用属性是所有实例共享的<br>创建子类实例时，无法向构造函数传参</p>
-<h3 id="2、构造继承（call、apply继承）"><a href="#2、构造继承（call、apply继承）" class="headerlink" title="2、构造继承（call、apply继承）"></a>2、构造继承（call、apply继承）</h3><pre class=" language-bash"><code class="language-bash">    <span class="token keyword">function</span> Cat<span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        Animal.call<span class="token punctuation">(</span>this,name<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    var <span class="token function">cat</span> <span class="token operator">=</span> new Cat<span class="token punctuation">(</span><span class="token string">"Tom"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    console.log<span class="token punctuation">(</span>cat.name<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    cat.say<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    console.log<span class="token punctuation">(</span>cat instanceof Animal<span class="token punctuation">)</span><span class="token punctuation">;</span>//false
-    console.log<span class="token punctuation">(</span>cat instanceof Cat<span class="token punctuation">)</span><span class="token punctuation">;</span>//true
+<h2 id="Vue的指令与过滤器"><a href="#Vue的指令与过滤器" class="headerlink" title="Vue的指令与过滤器"></a>Vue的指令与过滤器</h2><p>指令（Directives）是Vue为开发者提供的模板语法，用于辅助开发者渲染页面的基本结构。Vue中的指令按照不同的用途可以分为一下6大类：<br>1、内容渲染指令<br>2、属性绑定指令<br>3、事件绑定指令<br>4、双向绑定指令<br>5、条件渲染指令<br>6、列表渲染指令<br>注意：指令是Vue开发中最基础、最常用、最简单的知识点</p>
+<h3 id="2-1内容渲染指令"><a href="#2-1内容渲染指令" class="headerlink" title="2.1内容渲染指令"></a>2.1内容渲染指令</h3><p>内容渲染指令用来辅助开发者渲染DOM元素的文本内容，常用的渲染指令有如下3个：<br>v-text<br>插值表达式<br>v-html</p>
+<p>v-tetx用法</p>
+<pre class=" language-bash"><code class="language-bash">    <span class="token operator">&lt;</span><span class="token operator">!</span>-- v-text会覆盖元素默认的内容 --<span class="token operator">></span>
+    <span class="token operator">&lt;</span>p v-text<span class="token operator">=</span><span class="token string">"username"</span><span class="token operator">></span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
+    <span class="token operator">&lt;</span>p v-text<span class="token operator">=</span><span class="token string">"gander"</span><span class="token operator">></span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
+    <span class="token operator">&lt;</span>p v-text<span class="token operator">=</span><span class="token string">"info"</span><span class="token operator">></span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
 </code></pre>
-<p>特点：<br>解决了1中，子类实例共享父类引用属性的问题<br>创建子类实例时，可以向父类传递参数<br>可以实现多继承（call多个父类对象）<br>缺点：<br>实例并不是父类的实例，只是子类的实例<br>只能继承父类的实例属性和方法，不能继承原型属性/方法<br>无法实现函数复用，每个子类都有父类实例函数的副本，影响性能</p>
-<h3 id="3、拷贝继承"><a href="#3、拷贝继承" class="headerlink" title="3、拷贝继承"></a>3、拷贝继承</h3><pre class=" language-bash"><code class="language-bash">    <span class="token keyword">function</span> Cat<span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">{</span> 
-        var animal <span class="token operator">=</span> new Animal<span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-        for<span class="token punctuation">(</span>var key <span class="token keyword">in</span> animal<span class="token punctuation">)</span><span class="token punctuation">{</span> 
-            Cat.prototype<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> animal<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span> 
-        <span class="token punctuation">}</span> 
-    <span class="token punctuation">}</span> 
-    // Test Code 
-    var <span class="token function">cat</span> <span class="token operator">=</span> new Cat<span class="token punctuation">(</span><span class="token string">"Tom"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    console.log<span class="token punctuation">(</span>cat.name<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    cat.say<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    console.log<span class="token punctuation">(</span>cat instanceof Animal<span class="token punctuation">)</span><span class="token punctuation">;</span> // <span class="token boolean">false</span> 
-    console.log<span class="token punctuation">(</span>cat instanceof Cat<span class="token punctuation">)</span><span class="token punctuation">;</span> // <span class="token boolean">true</span>
+<p>插值表达式语法<br>    用来解决v-text会覆盖默认文本的问题<br>    用法</p>
+<pre class=" language-bash"><code class="language-bash">    <span class="token operator">&lt;</span><span class="token operator">!</span>-- 插值表达式<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>在实际开发中用的最多，只是内容的占位符，不会覆盖原有内容 --<span class="token operator">></span>
+    <span class="token operator">&lt;</span>p<span class="token operator">></span>姓名:<span class="token punctuation">{</span><span class="token punctuation">{</span>username<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
+    <span class="token operator">&lt;</span>p<span class="token operator">></span>性别:<span class="token punctuation">{</span><span class="token punctuation">{</span>gander<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
+    <span class="token operator">&lt;</span>p<span class="token operator">></span>信息:<span class="token punctuation">{</span><span class="token punctuation">{</span>info<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
 </code></pre>
-<p>特点：<br>支持多继承</p>
-<p>缺点：<br>效率较低，内存占用高（因为要拷贝父类的属性）<br>无法获取父类不可枚举的方法（不可枚举方法，不能使用for in 访问到）</p>
-<h3 id="4-组合继承（原型链和构造继承的组合）"><a href="#4-组合继承（原型链和构造继承的组合）" class="headerlink" title="4. 组合继承（原型链和构造继承的组合）"></a>4. 组合继承（原型链和构造继承的组合）</h3><pre class=" language-bash"><code class="language-bash">    <span class="token keyword">function</span> Cat<span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">{</span> 
-            Animal.call<span class="token punctuation">(</span>this,name<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-        <span class="token punctuation">}</span> 
-        Cat.prototype <span class="token operator">=</span> new Animal<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-        Cat.prototype.constructor <span class="token operator">=</span> Cat<span class="token punctuation">;</span> 
-        // Test Code 
-        var <span class="token function">cat</span> <span class="token operator">=</span> new Cat<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-        console.log<span class="token punctuation">(</span>cat.name<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-        cat.say<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-        console.log<span class="token punctuation">(</span>cat instanceof Animal<span class="token punctuation">)</span><span class="token punctuation">;</span> // <span class="token boolean">true</span> 
-        console.log<span class="token punctuation">(</span>cat instanceof Cat<span class="token punctuation">)</span><span class="token punctuation">;</span> // <span class="token boolean">true</span>
+<p>v-html用法<br>v-text指令和插值表达式只能渲染纯文本内容，如果要把包含HTML标签的字符串渲染为页面的HTML元素，则需要用到v-html这个指令</p>
+<pre class=" language-bash"><code class="language-bash">    <span class="token operator">&lt;</span><span class="token operator">!</span>-- v-text跟插值表达式都无法渲染HTML标签 v-html可以把带有标签的字符串渲染成真正的HTML标签
+     v-html也会覆盖元素默认内容 --<span class="token operator">></span>
+    <span class="token operator">&lt;</span>p v-html<span class="token operator">=</span><span class="token string">"info"</span><span class="token operator">></span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
 </code></pre>
-<p>特点：<br>弥补了方式2的缺陷，可以继承实例属性/方法，也可以继承原型属性/方法<br>既是子类的实例，也是父类的实例<br>不存在引用属性共享问题<br>可传参<br>函数可复用</p>
-<p>缺点：<br>调用了两次父类构造函数，生成了两份实例（子类实例将子类原型上的那份屏蔽了）</p>
-<h3 id="5-寄生组合继承"><a href="#5-寄生组合继承" class="headerlink" title="5. 寄生组合继承"></a>5. 寄生组合继承</h3><pre class=" language-bash"><code class="language-bash">    <span class="token keyword">function</span> Cat<span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">{</span> 
-            Animal.call<span class="token punctuation">(</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-            this.name <span class="token operator">=</span> name<span class="token punctuation">;</span> 
-        <span class="token punctuation">}</span> 
-        <span class="token punctuation">(</span>function<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> 
-            // 创建一个没有实例方法的类 
-            var Super <span class="token operator">=</span> function<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span> 
-            Super.prototype <span class="token operator">=</span> Animal.prototype<span class="token punctuation">;</span> 
-            //将实例作为子类的原型 
-            Cat.prototype <span class="token operator">=</span> new Super<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-        // Test Code 
-        var <span class="token function">cat</span> <span class="token operator">=</span> new Cat<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-        console.log<span class="token punctuation">(</span>cat.name<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-        cat.say<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-        console.log<span class="token punctuation">(</span>cat instanceof Animal<span class="token punctuation">)</span><span class="token punctuation">;</span> //true 
-        console.log<span class="token punctuation">(</span>cat instanceof Cat<span class="token punctuation">)</span><span class="token punctuation">;</span> //true
+<h3 id="2-2属性绑定指令"><a href="#2-2属性绑定指令" class="headerlink" title="2.2属性绑定指令"></a>2.2属性绑定指令</h3><p>如果需要为元素的属性动态绑定属性值，则需要用到v-bind属性绑定指令，用法如下：</p>
+<pre class=" language-bash"><code class="language-bash">    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">!</span>-- 给元素的属性动态绑定值需要使用v-bind --<span class="token operator">></span>
+        <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v-bind:placeholder<span class="token operator">=</span><span class="token string">"tips"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>hr<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">!</span>-- Vue中规定v-bind可以简写为: --<span class="token operator">></span>
+        <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> :placeholder<span class="token operator">=</span><span class="token string">"tips"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>hr<span class="token operator">></span>
+        <span class="token operator">&lt;</span>div :class<span class="token operator">=</span><span class="token string">" 'box' + index"</span><span class="token operator">></span>这是一个div<span class="token operator">&lt;</span>/div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>script<span class="token operator">></span>
+        const vm <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+            el: <span class="token string">'#app'</span>
+            data:<span class="token punctuation">{</span>
+                tips: <span class="token string">'请输入用户名'</span>,
+                index: 1
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token operator">&lt;</span>/script<span class="token operator">></span>
 </code></pre>
-<p>特点：几乎完美<br>缺点： 较为复杂</p>
-<h3 id="ES6继承（语法糖）"><a href="#ES6继承（语法糖）" class="headerlink" title="ES6继承（语法糖）"></a>ES6继承（语法糖）</h3><pre class=" language-bash"><code class="language-bash">    class Animal<span class="token punctuation">{</span> 
-        constructor<span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">{</span> 
-            this.name <span class="token operator">=</span> name<span class="token punctuation">;</span> 
-        <span class="token punctuation">}</span> 
-        say<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> 
-            alert<span class="token punctuation">(</span><span class="token string">"My name is "</span>+this.name<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-        <span class="token punctuation">}</span> 
-         eat<span class="token punctuation">(</span>food<span class="token punctuation">)</span><span class="token punctuation">{</span> 
-            alert<span class="token punctuation">(</span>this.name+<span class="token string">" is eating "</span>+food<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-        <span class="token punctuation">}</span> 
-    <span class="token punctuation">}</span> 
-     class Cat extends Animal<span class="token punctuation">{</span> 
-        constructor<span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">{</span> 
-            super<span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-        <span class="token punctuation">}</span> 
-    <span class="token punctuation">}</span> 
-    var tom <span class="token operator">=</span> new Cat<span class="token punctuation">(</span><span class="token string">"Tom"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    tom.say<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    tom.eat<span class="token punctuation">(</span><span class="token string">"apple"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    console.log<span class="token punctuation">(</span>cat instanceof Animal<span class="token punctuation">)</span><span class="token punctuation">;</span> //true 
-    console.log<span class="token punctuation">(</span>cat instanceof Cat<span class="token punctuation">)</span><span class="token punctuation">;</span> //true
+<p>由于 v-bind 指令在开发中使用频率非常高，因此，vue 官方为其提供了简写形式（简写为英文的 : ）。</p>
+<p>注意：原生 DOM 对象有 onclick、oninput、onkeyup、onmouseover 等原生事件，替换为 vue 的事件绑定形式后，<br>分别为：v-on:click、v-on:input、v-on:keyup、v-on:mouseover</p>
+<h3 id="2-3-事件绑定指令"><a href="#2-3-事件绑定指令" class="headerlink" title="2.3 事件绑定指令"></a>2.3 事件绑定指令</h3><p>通过 v-on 绑定的事件处理函数，需要在 methods 节点中进行声明：</p>
+<pre class=" language-bash"><code class="language-bash">    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>p<span class="token operator">></span>count的值是<span class="token punctuation">{</span><span class="token punctuation">{</span>count<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
+        <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"add(1)"</span>+1<span class="token operator">></span><span class="token operator">&lt;</span>/button<span class="token operator">></span>
+        <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"add(1)"</span>-1<span class="token operator">></span><span class="token operator">&lt;</span>/button<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">!</span>-- 在绑定事件处理函数的时候可以用<span class="token punctuation">(</span><span class="token punctuation">)</span>传参 --<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">!</span>-- 使用v-on:来绑定事件 可以用简写为@ --<span class="token operator">></span>
+    <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+
+    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"../vue-2.6.12.js"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
+    <span class="token operator">&lt;</span>script<span class="token operator">></span>
+        const vm <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+            el: <span class="token string">'#app'</span>,
+            data:<span class="token punctuation">{</span>
+                count: 0
+            <span class="token punctuation">}</span>,
+            //事件处理函数一定要定义到methods下
+            methods:<span class="token punctuation">{</span>
+                add<span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    this.count +<span class="token operator">=</span> n
+                <span class="token punctuation">}</span>,
+                sub<span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    this.count -<span class="token operator">=</span> n
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token operator">&lt;</span>/script<span class="token operator">></span>
 </code></pre>
+<p>由于v-on指令在开发中使用非常频繁，因此提供了简写方式@<br>在使用v-on指令绑定事件时，可以使用()进行传参，代码如下：</p>
+<pre class=" language-bash"><code class="language-bash">    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>p<span class="token operator">></span>count的值是<span class="token punctuation">{</span><span class="token punctuation">{</span>count<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
+        <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"add(2)"</span>+n<span class="token operator">></span><span class="token operator">&lt;</span>/button<span class="token operator">></span>
+    <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+
+    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"../vue-2.6.12.js"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
+    <span class="token operator">&lt;</span>script<span class="token operator">></span>
+        const vm <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+            el: <span class="token string">'#app'</span>,
+            data:<span class="token punctuation">{</span>
+                count: 0
+            <span class="token punctuation">}</span>,
+            //事件处理函数一定要定义到methods下
+            methods:<span class="token punctuation">{</span>
+                add<span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    this.count +<span class="token operator">=</span> n
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token operator">&lt;</span>/script<span class="token operator">></span>
+</code></pre>
+<h4 id="2-3-1按键修饰符"><a href="#2-3-1按键修饰符" class="headerlink" title="2.3.1按键修饰符"></a>2.3.1按键修饰符</h4><p>在监听键盘事件时，我们经常需要判断详细的按键，此时，可以为键盘相关的事件添加按键修饰符，例：</p>
+<pre class=" language-bash"><code class="language-bash">     <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> @keyup.enter<span class="token operator">=</span><span class="token string">"enter"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> @keyup.esc<span class="token operator">=</span><span class="token string">"esc"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>script<span class="token operator">></span>
+        const vm <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+            el: <span class="token string">'#app'</span>,
+            methods: <span class="token punctuation">{</span>
+                enter<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    console.log<span class="token punctuation">(</span><span class="token string">'你按到了enter'</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>,
+                esc<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    console.log<span class="token punctuation">(</span><span class="token string">'你按到了esc'</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+ 
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>在第一个表单内按enter键就会输出你按到了enter，第二个esc同上</p>
+<h3 id="2-4双向绑定指令"><a href="#2-4双向绑定指令" class="headerlink" title="2.4双向绑定指令"></a>2.4双向绑定指令</h3><p>Vue提供了v-model双向数据绑定指令，用来辅助开发者在不操作DOM的前提下，快速获取表单的数据。</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>p v-model<span class="token operator">=</span><span class="token string">"username"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span> username <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
+    <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v-model<span class="token operator">=</span><span class="token string">"username"</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>/div<span class="token operator">></span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"../vue-2.6.12.js"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+    const vm <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+        el: <span class="token string">'#app'</span>,
+        data: <span class="token punctuation">{</span>
+            username: <span class="token string">'Mu'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>在输入框中更改内容p标签会同步变更<br>input、select、textarae都可以使用v-model</p>
+<h3 id="2-5条件渲染指令"><a href="#2-5条件渲染指令" class="headerlink" title="2.5条件渲染指令"></a>2.5条件渲染指令</h3><p>条件渲染指令用来辅助开发者按需控制DOM的显示与隐藏，条件渲染指令有以下两个：<br>1、v-if<br>2、v-show</p>
 
                 
             </div>
@@ -515,7 +560,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/01/13/Test/">http://example.com/2022/01/13/Test/</a>
+                    <a href="http://example.com/2022/02/12/Vue%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%8C%87%E4%BB%A4/">http://example.com/2022/02/12/Vue%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%8C%87%E4%BB%A4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -553,8 +598,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JS%E3%80%81%E9%97%AD%E5%8C%85%E3%80%81%E7%BB%A7%E6%89%BF/">
-                                    <span class="chip bg-color">JS、闭包、继承</span>
+                                <a href="/tags/Vue/">
+                                    <span class="chip bg-color">Vue</span>
                                 </a>
                             
                         </div>
@@ -987,9 +1032,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/02/12/Vue%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%8C%87%E4%BB%A4/">
                     <div class="card-image">
@@ -1007,9 +1053,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1022,6 +1068,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1040,13 +1087,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/01/10/ceshi/">
+                <a href="/2022/01/13/Test/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="JS对象">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="JS-闭包和继承">
                         
-                        <span class="card-title">JS对象</span>
+                        <span class="card-title">JS-闭包和继承</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1057,7 +1104,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-13
                             </span>
                         <span class="publish-author">
                             
@@ -1074,8 +1121,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AF%B9%E8%B1%A1%E3%80%81%E7%B1%BB%E3%80%81%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">
-                        <span class="chip bg-color">对象、类、内置对象</span>
+                    <a href="/tags/JS%E3%80%81%E9%97%AD%E5%8C%85%E3%80%81%E7%BB%A7%E6%89%BF/">
+                        <span class="chip bg-color">JS、闭包、继承</span>
                     </a>
                     
                 </div>
