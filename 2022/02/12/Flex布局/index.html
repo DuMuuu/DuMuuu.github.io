@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Vue的基本使用与指令, HTML,CSS,JavaScript,Vue.js等">
+    <meta name="keywords" content="Css3 Flex布局, HTML,CSS,JavaScript,Vue.js等">
     <meta name="description" content="人们赞美流星，是因为它燃烧着走完自己的全部路程">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Vue的基本使用与指令 | MuBlog</title>
+    <title>Css3 Flex布局 | MuBlog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -227,12 +227,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Vue的基本使用与指令</h1>
+                    <h1 class="description center-align post-title">Css3 Flex布局</h1>
                 </div>
             </div>
         </div>
@@ -348,8 +348,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Vue/">
-                                <span class="chip bg-color">Vue</span>
+                            <a href="/tags/Css3/">
+                                <span class="chip bg-color">Css3</span>
                             </a>
                         
                     </div>
@@ -394,212 +394,104 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1、Vue的基本使用"><a href="#1、Vue的基本使用" class="headerlink" title="1、Vue的基本使用"></a>1、Vue的基本使用</h2><p>1、导入vue.js的script脚本文件<br>2、在页面中声明一个将要被vue所控制的DOM区域<br>3、创建vm实例对象 （vue实例对象）</p>
-<pre class=" language-bash"><code class="language-bash">    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>url<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/div<span class="token operator">></span>
-    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"../vue-2.6.12.js"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
-    <span class="token operator">&lt;</span>script<span class="token operator">></span>
-        const vm <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
-            el: <span class="token string">'#app'</span>,//el指定选择器
- 
-        data: <span class="token punctuation">{</span>
-            url: <span class="token string">'www.xxhzm.cn'</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token operator">&lt;</span>/script<span class="token operator">></span>
+                <h2 id="一、Flex布局是什么？"><a href="#一、Flex布局是什么？" class="headerlink" title="一、Flex布局是什么？"></a>一、Flex布局是什么？</h2><p>Flex意为“弹性布局”，用来为盒状模型提供最大灵活性<br>任何一个容器都可以指定为Flex布局</p>
+<pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.box</span></span><span class="token punctuation">{</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 </code></pre>
-<h2 id="2、Vue的指令与过滤器"><a href="#2、Vue的指令与过滤器" class="headerlink" title="2、Vue的指令与过滤器"></a>2、Vue的指令与过滤器</h2><p>指令（Directives）是Vue为开发者提供的模板语法，用于辅助开发者渲染页面的基本结构。Vue中的指令按照不同的用途可以分为一下6大类：<br>1、内容渲染指令<br>2、属性绑定指令<br>3、事件绑定指令<br>4、双向绑定指令<br>5、条件渲染指令<br>6、列表渲染指令<br>注意：指令是Vue开发中最基础、最常用、最简单的知识点</p>
-<h3 id="2-1、内容渲染指令"><a href="#2-1、内容渲染指令" class="headerlink" title="2.1、内容渲染指令"></a>2.1、内容渲染指令</h3><p>内容渲染指令用来辅助开发者渲染DOM元素的文本内容，常用的渲染指令有如下3个：<br>v-text<br>插值表达式<br>v-html</p>
-<p>v-tetx用法</p>
-<pre class=" language-bash"><code class="language-bash">    <span class="token operator">&lt;</span><span class="token operator">!</span>-- v-text会覆盖元素默认的内容 --<span class="token operator">></span>
-    <span class="token operator">&lt;</span>p v-text<span class="token operator">=</span><span class="token string">"username"</span><span class="token operator">></span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
-    <span class="token operator">&lt;</span>p v-text<span class="token operator">=</span><span class="token string">"gander"</span><span class="token operator">></span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
-    <span class="token operator">&lt;</span>p v-text<span class="token operator">=</span><span class="token string">"info"</span><span class="token operator">></span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
+<p>行内元素也可以使用Flex布局</p>
+<pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.box</span></span><span class="token punctuation">{</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> inline-flex<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 </code></pre>
-<p>插值表达式语法<br>    用来解决v-text会覆盖默认文本的问题<br>    用法</p>
-<pre class=" language-bash"><code class="language-bash">    <span class="token operator">&lt;</span><span class="token operator">!</span>-- 插值表达式<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>在实际开发中用的最多，只是内容的占位符，不会覆盖原有内容 --<span class="token operator">></span>
-    <span class="token operator">&lt;</span>p<span class="token operator">></span>姓名:<span class="token punctuation">{</span><span class="token punctuation">{</span>username<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
-    <span class="token operator">&lt;</span>p<span class="token operator">></span>性别:<span class="token punctuation">{</span><span class="token punctuation">{</span>gander<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
-    <span class="token operator">&lt;</span>p<span class="token operator">></span>信息:<span class="token punctuation">{</span><span class="token punctuation">{</span>info<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
+<p>Webkit内核的浏览器必须加上-webkit前缀</p>
+<pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.box</span></span><span class="token punctuation">{</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> -webkit-flex<span class="token punctuation">;</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 </code></pre>
-<p>v-html用法<br>v-text指令和插值表达式只能渲染纯文本内容，如果要把包含HTML标签的字符串渲染为页面的HTML元素，则需要用到v-html这个指令</p>
-<pre class=" language-bash"><code class="language-bash">    <span class="token operator">&lt;</span><span class="token operator">!</span>-- v-text跟插值表达式都无法渲染HTML标签 v-html可以把带有标签的字符串渲染成真正的HTML标签
-     v-html也会覆盖元素默认内容 --<span class="token operator">></span>
-    <span class="token operator">&lt;</span>p v-html<span class="token operator">=</span><span class="token string">"info"</span><span class="token operator">></span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
+<p>注意：设为Flex布局以后，子元素的float、clear和vertical-align属性将失效</p>
+<h2 id="二、基本概念"><a href="#二、基本概念" class="headerlink" title="二、基本概念"></a>二、基本概念</h2><p>采用Flex布局的元素，称为Flex容器（flex container）简称“容器”。它的所有子元素自动成为容器成员，称为Flex项目（flex item），简称项目。</p>
+<p>容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做main end;交叉轴的开始位置叫做cross start，结束位置叫做cross end。</p>
+<p>项目默认沿主轴排列，单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size</p>
+<h2 id="三、容器的属性"><a href="#三、容器的属性" class="headerlink" title="三、容器的属性"></a>三、容器的属性</h2><p>以下6个属性设置在容器上：<br>    1、flex-direction<br>    2、flex-wrap<br>    3、flex-flow<br>    4、justify-content<br>    5、align-items<br>    6、align-content</p>
+<h3 id="3-1、flex-direction属性"><a href="#3-1、flex-direction属性" class="headerlink" title="3.1、flex-direction属性"></a>3.1、flex-direction属性</h3><p>flex-direction属性决定主轴的方向（即项目的排列方向）</p>
+<pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+        <span class="token property">flex-direction</span><span class="token punctuation">:</span> row | row-reverse | column | column-reverse<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 </code></pre>
-<h3 id="2-2、属性绑定指令"><a href="#2-2、属性绑定指令" class="headerlink" title="2.2、属性绑定指令"></a>2.2、属性绑定指令</h3><p>如果需要为元素的属性动态绑定属性值，则需要用到v-bind属性绑定指令，用法如下：</p>
-<pre class=" language-bash"><code class="language-bash">    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span><span class="token operator">!</span>-- 给元素的属性动态绑定值需要使用v-bind --<span class="token operator">></span>
-        <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v-bind:placeholder<span class="token operator">=</span><span class="token string">"tips"</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>hr<span class="token operator">></span>
-        <span class="token operator">&lt;</span><span class="token operator">!</span>-- Vue中规定v-bind可以简写为: --<span class="token operator">></span>
-        <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> :placeholder<span class="token operator">=</span><span class="token string">"tips"</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>hr<span class="token operator">></span>
-        <span class="token operator">&lt;</span>div :class<span class="token operator">=</span><span class="token string">" 'box' + index"</span><span class="token operator">></span>这是一个div<span class="token operator">&lt;</span>/div<span class="token operator">></span>
-    <span class="token operator">&lt;</span>/div<span class="token operator">></span>
-    <span class="token operator">&lt;</span>script<span class="token operator">></span>
-        const vm <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
-            el: <span class="token string">'#app'</span>
-            data:<span class="token punctuation">{</span>
-                tips: <span class="token string">'请输入用户名'</span>,
-                index: 1
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token operator">&lt;</span>/script<span class="token operator">></span>
+<p>它可能有4个值：<br>1、row（默认值）：主轴为水平方向，起点在左端<br>2、row-reverse：主轴为水平方向，起点在右端<br>3、column：主轴为垂直方向，起点在上沿<br>4、column-reverse：主轴为垂直方向，起点在下沿</p>
+<h3 id="3-2、flex-wrap属性"><a href="#3-2、flex-wrap属性" class="headerlink" title="3.2、flex-wrap属性"></a>3.2、flex-wrap属性</h3><p>默认情况下，项目都排在一条线（又称：“轴线”）上，flex-wrap属性定义，如果一条轴线排不下，如何换行</p>
+<pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.box</span></span><span class="token punctuation">{</span>
+        <span class="token property">flex-wrap</span><span class="token punctuation">:</span> nowrap | wrap | wrap-reverse<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 </code></pre>
-<p>由于 v-bind 指令在开发中使用频率非常高，因此，vue 官方为其提供了简写形式（简写为英文的 : ）。</p>
-<p>注意：原生 DOM 对象有 onclick、oninput、onkeyup、onmouseover 等原生事件，替换为 vue 的事件绑定形式后，<br>分别为：v-on:click、v-on:input、v-on:keyup、v-on:mouseover</p>
-<h3 id="2-3、事件绑定指令"><a href="#2-3、事件绑定指令" class="headerlink" title="2.3、事件绑定指令"></a>2.3、事件绑定指令</h3><p>通过 v-on 绑定的事件处理函数，需要在 methods 节点中进行声明：</p>
-<pre class=" language-bash"><code class="language-bash">    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>p<span class="token operator">></span>count的值是<span class="token punctuation">{</span><span class="token punctuation">{</span>count<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
-        <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"add(1)"</span>+1<span class="token operator">></span><span class="token operator">&lt;</span>/button<span class="token operator">></span>
-        <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"add(1)"</span>-1<span class="token operator">></span><span class="token operator">&lt;</span>/button<span class="token operator">></span>
-        <span class="token operator">&lt;</span><span class="token operator">!</span>-- 在绑定事件处理函数的时候可以用<span class="token punctuation">(</span><span class="token punctuation">)</span>传参 --<span class="token operator">></span>
-        <span class="token operator">&lt;</span><span class="token operator">!</span>-- 使用v-on:来绑定事件 可以用简写为@ --<span class="token operator">></span>
-    <span class="token operator">&lt;</span>/div<span class="token operator">></span>
-
-    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"../vue-2.6.12.js"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
-    <span class="token operator">&lt;</span>script<span class="token operator">></span>
-        const vm <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
-            el: <span class="token string">'#app'</span>,
-            data:<span class="token punctuation">{</span>
-                count: 0
-            <span class="token punctuation">}</span>,
-            //事件处理函数一定要定义到methods下
-            methods:<span class="token punctuation">{</span>
-                add<span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">{</span>
-                    this.count +<span class="token operator">=</span> n
-                <span class="token punctuation">}</span>,
-                sub<span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">{</span>
-                    this.count -<span class="token operator">=</span> n
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token operator">&lt;</span>/script<span class="token operator">></span>
+<p>它可能有3个值：<br>1、nowrap（默认）：不换行<br>2、wrap：换行，第一行在上方<br>3、wrap-reverse：换行，第一行在下方</p>
+<h3 id="3-3、flex-flow属性"><a href="#3-3、flex-flow属性" class="headerlink" title="3.3、flex-flow属性"></a>3.3、flex-flow属性</h3><p>flex-flow属性是flex-direction属性和flex-wrap属性的简写，默认值为row nowrap</p>
+<pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+        <span class="token property">flex-flow</span><span class="token punctuation">:</span> &lt;flex-direction> &lt;flex-wrap><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 </code></pre>
-<p>由于v-on指令在开发中使用非常频繁，因此提供了简写方式@<br>在使用v-on指令绑定事件时，可以使用()进行传参，代码如下：</p>
-<pre class=" language-bash"><code class="language-bash">    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>p<span class="token operator">></span>count的值是<span class="token punctuation">{</span><span class="token punctuation">{</span>count<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
-        <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"add(2)"</span>+n<span class="token operator">></span><span class="token operator">&lt;</span>/button<span class="token operator">></span>
-    <span class="token operator">&lt;</span>/div<span class="token operator">></span>
-
-    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"../vue-2.6.12.js"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
-    <span class="token operator">&lt;</span>script<span class="token operator">></span>
-        const vm <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
-            el: <span class="token string">'#app'</span>,
-            data:<span class="token punctuation">{</span>
-                count: 0
-            <span class="token punctuation">}</span>,
-            //事件处理函数一定要定义到methods下
-            methods:<span class="token punctuation">{</span>
-                add<span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">{</span>
-                    this.count +<span class="token operator">=</span> n
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token operator">&lt;</span>/script<span class="token operator">></span>
+<h3 id="3-4、justify-content属性"><a href="#3-4、justify-content属性" class="headerlink" title="3.4、justify-content属性"></a>3.4、justify-content属性</h3><p>justify-content属性定义了项目在主轴上的对齐方式</p>
+<pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+        <span class="token property">justify-content</span><span class="token punctuation">:</span> flex-start | flex-end | center | space-between | space-around<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="2-3-1、按键修饰符"><a href="#2-3-1、按键修饰符" class="headerlink" title="2.3.1、按键修饰符"></a>2.3.1、按键修饰符</h4><p>在监听键盘事件时，我们经常需要判断详细的按键，此时，可以为键盘相关的事件添加按键修饰符，例：</p>
-<pre class=" language-bash"><code class="language-bash">     <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> @keyup.enter<span class="token operator">=</span><span class="token string">"enter"</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> @keyup.esc<span class="token operator">=</span><span class="token string">"esc"</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>/div<span class="token operator">></span>
-    <span class="token operator">&lt;</span>script<span class="token operator">></span>
-        const vm <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
-            el: <span class="token string">'#app'</span>,
-            methods: <span class="token punctuation">{</span>
-                enter<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    console.log<span class="token punctuation">(</span><span class="token string">'你按到了enter'</span><span class="token punctuation">)</span>
-                <span class="token punctuation">}</span>,
-                esc<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    console.log<span class="token punctuation">(</span><span class="token string">'你按到了esc'</span><span class="token punctuation">)</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
- 
-        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<p>它可能取5个值，具体对齐方式与轴的方向有关，下面假设主轴为从左到右</p>
+<p>1、flex-start（默认值）：左对齐<br>2、flex-end：右对齐<br>3、center：居中<br>4、space-between：两端对齐，项目之间的间隔相等<br>5、space-around：每个项目两侧的间隔相等，所以，项目之间的间隔比项目与边框的间隔大一倍</p>
+<h3 id="3-5、align-items属性"><a href="#3-5、align-items属性" class="headerlink" title="3.5、align-items属性"></a>3.5、align-items属性</h3><p>align-items属性定义项目在交叉轴上如何对齐</p>
+<pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+        <span class="token property">align-items</span><span class="token punctuation">:</span> flex-start | flex-end | center | baseline | stretch<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 </code></pre>
-<p>在第一个表单内按enter键就会输出你按到了enter，第二个esc同上</p>
-<h3 id="2-4、双向绑定指令"><a href="#2-4、双向绑定指令" class="headerlink" title="2.4、双向绑定指令"></a>2.4、双向绑定指令</h3><p>Vue提供了v-model双向数据绑定指令，用来辅助开发者在不操作DOM的前提下，快速获取表单的数据。</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>p v-model<span class="token operator">=</span><span class="token string">"username"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span> username <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
-    <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v-model<span class="token operator">=</span><span class="token string">"username"</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>/div<span class="token operator">></span>
-<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"../vue-2.6.12.js"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
-<span class="token operator">&lt;</span>script<span class="token operator">></span>
-    const vm <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
-        el: <span class="token string">'#app'</span>,
-        data: <span class="token punctuation">{</span>
-            username: <span class="token string">'Mu'</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<p>它可能取5个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。</p>
+<p>1、flex-start：交叉轴的起点对齐。<br>2、flex-end：交叉轴的终点对齐。<br>3、center：交叉轴的中点对齐。<br>4、baseline: 项目的第一行文字的基线对齐。<br>5、stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</p>
+<h3 id="3-6、align-content属性"><a href="#3-6、align-content属性" class="headerlink" title="3.6、align-content属性"></a>3.6、align-content属性</h3><p>align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。</p>
+<pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+        <span class="token property">align-content</span><span class="token punctuation">:</span> flex-start | flex-end | center | space-between |
+         space-around | stretch<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 </code></pre>
-<p>在输入框中更改内容p标签会同步变更<br>input、select、textarae都可以使用v-model</p>
-<h3 id="2-5、条件渲染指令"><a href="#2-5、条件渲染指令" class="headerlink" title="2.5、条件渲染指令"></a>2.5、条件渲染指令</h3><p>条件渲染指令用来辅助开发者按需控制DOM的显示与隐藏，条件渲染指令有以下两个：<br>1、v-if<br>2、v-show</p>
-<pre class=" language-bash"><code class="language-bash">    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>p v-if<span class="token operator">=</span><span class="token string">"display"</span><span class="token operator">></span>我是被v-if控制的<span class="token operator">&lt;</span>/p<span class="token operator">></span>
-        <span class="token operator">&lt;</span>p v-show<span class="token operator">=</span><span class="token string">"display"</span><span class="token operator">></span>我是被v-show控制的<span class="token operator">&lt;</span>/p<span class="token operator">></span>
-    <span class="token operator">&lt;</span>/div<span class="token operator">></span>
-    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"../vue-2.6.12.js"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
-    <span class="token operator">&lt;</span>script<span class="token operator">></span>
-        const vm <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
-            el: <span class="token string">'#app'</span>,
-        <span class="token punctuation">}</span><span class="token punctuation">)</span>
-        data:<span class="token punctuation">{</span>
-            display: <span class="token boolean">true</span>
-        <span class="token punctuation">}</span>
-    <span class="token operator">&lt;</span>/script<span class="token operator">></span>
+<p>该属性可能取6个值:</p>
+<p>1、flex-start：与交叉轴的起点对齐。<br>2、flex-end：与交叉轴的终点对齐。<br>3、center：与交叉轴的中点对齐。<br>4、space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。<br>5、space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。<br>6、stretch（默认值）：轴线占满整个交叉轴。</p>
+<h2 id="四、项目的属性"><a href="#四、项目的属性" class="headerlink" title="四、项目的属性"></a>四、项目的属性</h2><p>以下6个属性设置在项目上：</p>
+<p>1、order<br>2、flex-grow<br>3、flex-shrink<br>4、flex-basis<br>5、flex<br>6、align-self</p>
+<h3 id="4-1、order属性"><a href="#4-1、order属性" class="headerlink" title="4.1、order属性"></a>4.1、order属性</h3><p>order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。</p>
+<pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.item</span> </span><span class="token punctuation">{</span>
+        <span class="token property">order</span><span class="token punctuation">:</span> &lt;integer><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 </code></pre>
-<p>v-if和v-show的区别：<br>实现原理不同：<br>    v-if指令会动态的创建或移出DOM元素，从而控制元素在页面上的显示与隐藏<br>    v-show指令会动态为元素添加或移出style=”display: none;”样式，从而控制元素的显示与隐藏<br>性能消耗不同：<br>    v-if有更高的切换开销，而v-show有更高的初始渲染开销。<br>    如果需要非常频繁的切换，则使用v-show较好<br>    如果在运行时条件很少改变，则使用v-if较好</p>
-<h3 id="2-6、循环条件指令"><a href="#2-6、循环条件指令" class="headerlink" title="2.6、循环条件指令"></a>2.6、循环条件指令</h3><p>Vue提供了v-for列表渲染指令，用来辅助开发者基于一个数组来循环渲染一个列表结构。v-for指令需要使用item in items形式的特殊语法，其中：<br>    1、items 是待循环的数组<br>    2、item 是被循环的每一项<br>v-for指令还支持一个可选的第二个参数，即当前项的索引，语法格式为(item,index) in items,示例如下：</p>
-<pre class=" language-bash"><code class="language-bash">      <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>table class<span class="token operator">=</span><span class="token string">"table table-bordered table-hover"</span><span class="token operator">></span>
-            <span class="token operator">&lt;</span>thead<span class="token operator">></span>
-                <span class="token operator">&lt;</span>th<span class="token operator">></span>索引<span class="token operator">&lt;</span>/th<span class="token operator">></span>
-                <span class="token operator">&lt;</span>th<span class="token operator">></span>ID<span class="token operator">&lt;</span>/th<span class="token operator">></span>
-                <span class="token operator">&lt;</span>th<span class="token operator">></span>姓名<span class="token operator">&lt;</span>/th<span class="token operator">></span>
-            <span class="token operator">&lt;</span>/thead<span class="token operator">></span>
-            <span class="token operator">&lt;</span>tbody<span class="token operator">></span>
-                <span class="token operator">&lt;</span>tr v-for<span class="token operator">=</span><span class="token string">"(item,index) in list"</span><span class="token operator">></span>
-                    <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span> index <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/td<span class="token operator">></span>
-                    <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span> item.id <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/td<span class="token operator">></span>
-                    <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span> item.name <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/td<span class="token operator">></span>
-                <span class="token operator">&lt;</span>/tr<span class="token operator">></span>
-            <span class="token operator">&lt;</span>/tbody<span class="token operator">></span>
-        <span class="token operator">&lt;</span>/table<span class="token operator">></span>
-    <span class="token operator">&lt;</span>/div<span class="token operator">></span>
- 
-    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"../vue-2.6.12.js"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
-    <span class="token operator">&lt;</span>script<span class="token operator">></span>
-        const vm <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
-            el: <span class="token string">'#app'</span>,
-            data: <span class="token punctuation">{</span>
-                list: <span class="token punctuation">[</span><span class="token punctuation">{</span>
-                    id: 1,
-                    name: <span class="token string">'张三'</span>
-                <span class="token punctuation">}</span>, <span class="token punctuation">{</span>
-                    id: 2,
-                    name: <span class="token string">'李四'</span>
-                <span class="token punctuation">}</span>, <span class="token punctuation">{</span>
-                    id: 3,
-                    name: <span class="token string">'王五'</span>
-                <span class="token punctuation">}</span><span class="token punctuation">]</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<p>4.2 flex-grow属性<br>flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。</p>
+<pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.item</span> </span><span class="token punctuation">{</span>
+    <span class="token property">flex-grow</span><span class="token punctuation">:</span> &lt;number><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* default 0 */</span>
+    <span class="token punctuation">}</span>
 </code></pre>
-<p>注意：v-for 指令中的 item 项和 index 索引都是形参，可以根据需要进行重命名。例如 (user, i) in userlist</p>
-<p>使用 key 维护列表的状态<br>当列表的数据变化时，默认情况下，vue 会尽可能的复用已存在的 DOM 元素，从而提升渲染的性能。但这种<br>默认的性能优化策略，会导致有状态的列表无法被正确更新。<br>为了给 vue 一个提示，以便它能跟踪每个节点的身份，从而在保证有状态的列表被正确更新的前提下，提升渲<br>染的性能。此时，需要为每项提供一个唯一的 key 属性：</p>
-<h3 id="3、key-的注意事项"><a href="#3、key-的注意事项" class="headerlink" title="3、key 的注意事项:"></a>3、key 的注意事项:</h3><p>1、key 的值只能是字符串或数字类型<br>2、key 的值必须具有唯一性（即：key 的值不能重复）<br>3、建议把数据项 id 属性的值作为 key 的值（因为 id 属性的值具有唯一性）<br>4、使用 index 的值当作 key 的值没有任何意义（因为 index 的值不具有唯一性）<br>5、建议使用 v-for 指令时一定要指定 key 的值（既提升性能、又防止列表状态紊</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span><span class="token operator">!</span>-- 官方建议，只要用到了v-for指令，那么一点要绑定一个 :key 属性 --<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span>-- 而且，尽量把id作为key值 --<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span>-- 官方对key的值类型是有要求的 key的值只能是字符串或数字类型 --<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span>-- key的值千万不能重复，否则会终端进行报错 Duplicate keys detected  --<span class="token operator">></span>
-   <span class="token operator">&lt;</span>tr v-for<span class="token operator">=</span><span class="token string">"(item , index) in list"</span> :key<span class="token operator">=</span><span class="token string">"item.id"</span><span class="token operator">></span>
-   <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span> index <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/td<span class="token operator">></span>
-   <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span> item.id <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/td<span class="token operator">></span>
-   <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span> item.name <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/td<span class="token operator">></span>
-   <span class="token operator">&lt;</span>/tr<span class="token operator">></span>
- 
- 
+<p>如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。</p>
+<h3 id="4-3-flex-shrink属性"><a href="#4-3-flex-shrink属性" class="headerlink" title="4.3 flex-shrink属性"></a>4.3 flex-shrink属性</h3><p>flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
+<pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.item</span> </span><span class="token punctuation">{</span>
+    <span class="token property">flex-shrink</span><span class="token punctuation">:</span> &lt;number><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* default 1 */</span>
+    <span class="token punctuation">}</span>
 </code></pre>
+<p>如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。</p>
+<p>负值对该属性无效。</p>
+<h3 id="4-4-flex-basis属性"><a href="#4-4-flex-basis属性" class="headerlink" title="4.4 flex-basis属性"></a>4.4 flex-basis属性</h3><p>flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。</p>
+<pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.item</span> </span><span class="token punctuation">{</span>
+    <span class="token property">flex-basis</span><span class="token punctuation">:</span> &lt;length> | auto<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* default auto */</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。</p>
+<h3 id="4-5-flex属性"><a href="#4-5-flex属性" class="headerlink" title="4.5 flex属性"></a>4.5 flex属性</h3><p>flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。</p>
+<pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.item</span> </span><span class="token punctuation">{</span>
+    <span class="token property">flex</span><span class="token punctuation">:</span> none | [ &lt;<span class="token string">'flex-grow'</span>> &lt;<span class="token string">'flex-shrink'</span>>? || &lt;<span class="token string">'flex-basis'</span>> ]
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。<br>建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。</p>
+<h3 id="4-6-align-self属性"><a href="#4-6-align-self属性" class="headerlink" title="4.6 align-self属性"></a>4.6 align-self属性</h3><p>align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。</p>
+<pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.item</span> </span><span class="token punctuation">{</span>
+    <span class="token property">align-self</span><span class="token punctuation">:</span> auto | flex-start | flex-end | center | baseline | stretch<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>该属性可能取6个值，除了auto，其他都与align-items属性完全一致。</p>
 
                 
             </div>
@@ -626,7 +518,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/02/12/Vue%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%8C%87%E4%BB%A4/">http://example.com/2022/02/12/Vue%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%8C%87%E4%BB%A4/</a>
+                    <a href="http://example.com/2022/02/12/Flex%E5%B8%83%E5%B1%80/">http://example.com/2022/02/12/Flex%E5%B8%83%E5%B1%80/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -664,8 +556,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Vue/">
-                                    <span class="chip bg-color">Vue</span>
+                                <a href="/tags/Css3/">
+                                    <span class="chip bg-color">Css3</span>
                                 </a>
                             
                         </div>
@@ -1098,9 +990,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/02/12/Flex%E5%B8%83%E5%B1%80/">
                     <div class="card-image">
@@ -1118,9 +1011,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1133,6 +1026,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1151,13 +1045,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/01/13/Test/">
+                <a href="/2022/02/12/Vue%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%8C%87%E4%BB%A4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="JS-闭包和继承">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Vue的基本使用与指令">
                         
-                        <span class="card-title">JS-闭包和继承</span>
+                        <span class="card-title">Vue的基本使用与指令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1168,7 +1062,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-12
                             </span>
                         <span class="publish-author">
                             
@@ -1185,8 +1079,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JS%E3%80%81%E9%97%AD%E5%8C%85%E3%80%81%E7%BB%A7%E6%89%BF/">
-                        <span class="chip bg-color">JS、闭包、继承</span>
+                    <a href="/tags/Vue/">
+                        <span class="chip bg-color">Vue</span>
                     </a>
                     
                 </div>
