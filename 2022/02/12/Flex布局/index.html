@@ -463,32 +463,32 @@
 </code></pre>
 <p>4.2 flex-grow属性<br>flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。</p>
 <pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.item</span> </span><span class="token punctuation">{</span>
-    <span class="token property">flex-grow</span><span class="token punctuation">:</span> &lt;number><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* default 0 */</span>
+        <span class="token property">flex-grow</span><span class="token punctuation">:</span> &lt;number><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* default 0 */</span>
     <span class="token punctuation">}</span>
 </code></pre>
 <p>如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。</p>
 <h3 id="4-3-flex-shrink属性"><a href="#4-3-flex-shrink属性" class="headerlink" title="4.3 flex-shrink属性"></a>4.3 flex-shrink属性</h3><p>flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
 <pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.item</span> </span><span class="token punctuation">{</span>
-    <span class="token property">flex-shrink</span><span class="token punctuation">:</span> &lt;number><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* default 1 */</span>
+        <span class="token property">flex-shrink</span><span class="token punctuation">:</span> &lt;number><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* default 1 */</span>
     <span class="token punctuation">}</span>
 </code></pre>
 <p>如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。</p>
 <p>负值对该属性无效。</p>
 <h3 id="4-4-flex-basis属性"><a href="#4-4-flex-basis属性" class="headerlink" title="4.4 flex-basis属性"></a>4.4 flex-basis属性</h3><p>flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。</p>
 <pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.item</span> </span><span class="token punctuation">{</span>
-    <span class="token property">flex-basis</span><span class="token punctuation">:</span> &lt;length> | auto<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* default auto */</span>
+        <span class="token property">flex-basis</span><span class="token punctuation">:</span> &lt;length> | auto<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* default auto */</span>
     <span class="token punctuation">}</span>
 </code></pre>
 <p>它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。</p>
 <h3 id="4-5-flex属性"><a href="#4-5-flex属性" class="headerlink" title="4.5 flex属性"></a>4.5 flex属性</h3><p>flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。</p>
 <pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.item</span> </span><span class="token punctuation">{</span>
-    <span class="token property">flex</span><span class="token punctuation">:</span> none | [ &lt;<span class="token string">'flex-grow'</span>> &lt;<span class="token string">'flex-shrink'</span>>? || &lt;<span class="token string">'flex-basis'</span>> ]
+        <span class="token property">flex</span><span class="token punctuation">:</span> none | [ &lt;<span class="token string">'flex-grow'</span>> &lt;<span class="token string">'flex-shrink'</span>>? || &lt;<span class="token string">'flex-basis'</span>> ]
     <span class="token punctuation">}</span>
 </code></pre>
 <p>该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。<br>建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。</p>
-<h3 id="4-6-align-self属性"><a href="#4-6-align-self属性" class="headerlink" title="4.6 align-self属性"></a>4.6 align-self属性</h3><p>align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><p>4.6 align-self属性<br>align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。</p>
 <pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.item</span> </span><span class="token punctuation">{</span>
-    <span class="token property">align-self</span><span class="token punctuation">:</span> auto | flex-start | flex-end | center | baseline | stretch<span class="token punctuation">;</span>
+        <span class="token property">align-self</span><span class="token punctuation">:</span> auto | flex-start | flex-end | center | baseline | stretch<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 </code></pre>
 <p>该属性可能取6个值，除了auto，其他都与align-items属性完全一致。</p>
